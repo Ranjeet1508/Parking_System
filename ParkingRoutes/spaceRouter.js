@@ -32,6 +32,7 @@ const conn = require('../conn');
 //     }
 // });
 
+
 spaceRoute.get('/availability', async (req, res) => {
     conn.query('SELECT * FROM parking_space WHERE is_occupied = FALSE', (err, result) => {
         if (err) {
